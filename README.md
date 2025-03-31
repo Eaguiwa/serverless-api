@@ -10,9 +10,7 @@
 ## 🚀 Tecnologías Utilizadas
 Para garantizar la compatibilidad y evitar posibles fallos, se recomienda utilizar las siguientes versiones de las tecnologías:
 - **Node.js** v22.14.0
-- **swagger-ui-express** 
-- **express**
-
+- **swagger-ui-react** 
 
 ## 🔧 Instalación e Ejecucion
 1. Clonar el repositorio:
@@ -25,7 +23,7 @@ Para garantizar la compatibilidad y evitar posibles fallos, se recomienda utiliz
    ```
 4. Iniciar swagger:
    ```sh
-   npx swagger-ui-watcher swagger.json
+   npm start
    ```
 ## 📌 Endpoints Disponibles
 ---
