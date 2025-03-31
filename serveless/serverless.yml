@@ -1,0 +1,46 @@
+service: PatientsAPI
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-2
+  environment:
+    DYNAMODB_TABLE: patients
+
+plugins:
+  - serverless-offline  
+  
+resources:
+  Resources:
+    PatientsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: patients
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        BillingMode: PAY_PER_REQUEST
+
+functions:
+  patientsAPI:
+    handler: handler.handler
+    events:
+      - http:
+          path: patients
+          method: post
+          cors: true
+      - http:
+          path: patients/{id}
+          method: put
+          cors: true
+      - http:
+          path: patients/{id}
+          method: get
+          cors: true
+      - http:
+          path: patients/{id}
+          method: delete
+          cors: true
