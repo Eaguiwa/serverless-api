@@ -3,7 +3,7 @@
 
 - **Repositorio público** https://github.com/Eaguiwa/serverless-api
 - **Link API AWS Gateway** https://8kak7cjieb.execute-api.us-east-2.amazonaws.com/patients
-- **Link a la documentación**  https://serverless-r0o3lsynj-edsons-projects-ff443a75.vercel.app/
+- **Link a la documentación**  https://serverless-api-rust.vercel.app/
 
 
 
